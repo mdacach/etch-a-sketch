@@ -3,10 +3,15 @@
 }
 
 .cell {
-    display: inline-block;
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    border: 2px solid black;
-    /* border-color: red;  */
+    /* grid-column: auto;
+    grid-row: auto; */
+    border: 2px solid black; 
+}
+
+#container {
+    /* background-color: blue; */
+    display: grid; 
+    height: 480px;
+    width: 480px; 
+
 }
