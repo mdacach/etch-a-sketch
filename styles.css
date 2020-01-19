@@ -1,20 +1,33 @@
-button {
-    vertical-align: middle;
-    display: inline-block;
+* {
+    font-family: Monaco; 
 }
 
+#parent {
+    position: relative; 
+    background-color: aliceblue;
+    margin: auto;
+    height: 600px;
+    width: 600px; 
+}
+
+#clear {
+    position: relative;
+    background-color: white;
+    border: solid grey 1.5px;
+    margin: auto; 
+    display: flex;
+    top: 15px;
+}
 
 .cell {
-    /* grid-column: auto;
-    grid-row: auto; */
     border: 0.5px solid black; 
 }
 
 #container {
-    /* background-color: blue; */
+    position: relative;
     display: grid; 
     height: 480px;
     width: 480px; 
-    margin: auto;
-
+    margin: auto; 
+    top: 35px;
 }

@@ -11,13 +11,12 @@ function setupEventListeners() {
         cell = cells[i];
         cell.addEventListener('mouseover', function (e) {
             if (e.target.classList.contains('active')) return; 
-           e.target.classList.add('active');
+            e.target.classList.add('active');
             let rgb = generateRandomRGB();
             e.target.style.backgroundColor = rgb;
         });
         cell.addEventListener('mouseout', function (e) {
             // e.target.classList.remove('active');
-
         });
     }
 }
@@ -27,22 +26,18 @@ clearBtn.addEventListener('click', generateNewGrid);
 
 function removeCells () {
     let first = container.firstElementChild;
-    console.log(first);
     while (first) {
         first.remove();
         first = container.firstElementChild;
-
     }
-
-
-
 }
 
 function generateNewGrid () {
     removeCells();
     clearCells();
 
-    newGridSize = prompt("new grid size: ");
+    // newGridSize = prompt("new grid size: ", 30);
+    newGridSize = 20;
 
     container.style.gridTemplateRows = `repeat(${newGridSize}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${newGridSize}, 1fr)`; 
@@ -59,7 +54,6 @@ function generateNewGrid () {
 }
 
 function clearCells () {
-
     let cells = document.querySelectorAll(".cell");
 
     for (let i = 0; i < cells.length; i++) {
@@ -69,7 +63,6 @@ function clearCells () {
 }
 
 // generate a new color for every hover
-
 function generateRandomRGB () {
     let r = Math.random()*256;
     let g = Math.random()*256;
@@ -77,8 +70,6 @@ function generateRandomRGB () {
 
     return `rgb(${r}, ${g}, ${b})`;
 }
-
-
 
 generateNewGrid();
 
