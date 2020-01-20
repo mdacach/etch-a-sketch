@@ -10,13 +10,18 @@
     width: 600px; 
 }
 
-#clear {
+button {
     position: relative;
     background-color: white;
     border: solid grey 1.5px;
-    margin: auto; 
-    display: flex;
+    margin: 0 auto; 
+    display: inline-flex;
     top: 15px;
+}
+
+#button-wrapper {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cell {
